@@ -901,7 +901,7 @@ F15E_RAZBAM = {
 	{
 		[1] = 
 		{
-			pilot_name		   		= "F-15E_Pilot",
+			pilot_name		   		= "F-15E_PilotF",
 			role 				 	= "pilot",
 			role_display_name    	= _("Pilot"),
 			can_be_playable			= true,
@@ -910,7 +910,7 @@ F15E_RAZBAM = {
 			pilot_body_arg			= 50,
 			ejection_order			= 1,
 			ejection_added_speed	= {-5,15,0},
-			ejection_seat_name		= "F-15E_Pilot_Seat",
+			ejection_seat_name		= "F-15E_Pilot_SeatF",
 			drop_canopy_name		= "F-15E_Suite4_Canopy",
 			drop_parachute_name		= "F-15E_Pilot_Parachute",
             bailout_arg 			= -1,
@@ -919,7 +919,7 @@ F15E_RAZBAM = {
 		}, 
 		[2] = 
 		{
-			pilot_name		   		= "F-15E_Pilot",
+			pilot_name		   		= "F-15E_PilotR",
 			role 				 	= "instructor",
 			role_display_name    	= _("Weapons Systems Officer"),
 			can_be_playable			= true,
@@ -928,7 +928,7 @@ F15E_RAZBAM = {
 			pilot_body_arg			= 472,
 			ejection_order			= 2,
 			ejection_added_speed	= {-5,15,0},
-			ejection_seat_name		= "F-15E_Pilot_Seat",
+			ejection_seat_name		= "F-15E_Pilot_SeatR",
 			drop_canopy_name		= "F-15E_Suite4_Canopy",
 			drop_parachute_name		= "F-15E_Pilot_Parachute",
             bailout_arg 			= -1,
@@ -1515,14 +1515,15 @@ F15E_RAZBAM = {
 				{	CLSID = AGM130, Type = 1,
 					required = {{station = 8, loadout = {AXQ014}}},
 					forbidden = Pylon2_AGMs_restrictions
-				},
-				--]]
+				},--]]
+				
 				-- Smart Weapons
 				{	CLSID = GBU31A, forbidden = Pylon2_MK80s_restrictions },
 				{	CLSID = GBU31B, forbidden = Pylon2_MK80s_restrictions },
 				{	CLSID = GBU038, forbidden = Pylon2_MK80s_restrictions },
-				--[[
+			
 				{	CLSID = GBU054, forbidden = Pylon2_MK80s_restrictions },
+					--[[
 				{	CLSID = AGM154A, Type = 1, forbidden = Pylon2_general_restrictions },
 				{	CLSID = CBU103, forbidden = Pylon2_general_restrictions },
 				{	CLSID = CBU105, forbidden = Pylon2_general_restrictions },
@@ -1744,12 +1745,11 @@ F15E_RAZBAM = {
 				},
 				{	CLSID		= "{CFT_L_GBU_38_x_3}",
 					forbidden	= LCFT_general_restrictions
-				},
-				--[[
+				},	
 				{	CLSID		= "{CFT_L_GBU_54_x_3}",
 					forbidden	= LCFT_general_restrictions
 				},
-				--]]
+				
 				
 				-- Practice
 				{	CLSID		= BDU50LD,	connector	= CFT_L2,	forbidden	= LCFT_general_restrictions },
@@ -1844,11 +1844,12 @@ F15E_RAZBAM = {
 						{station = 14, loadout = {GBU028}}
 					} 
 				},	
-				
+					--]]
 				{ CLSID = GBU31A },
 				{ CLSID = GBU31B },
 				{ CLSID = GBU038 },
-				{ CLSID = GBU054 },
+					
+				{ CLSID = GBU054 },--[[
 				{ CLSID = AGM154A },
 				--]]
 				
@@ -1990,7 +1991,7 @@ F15E_RAZBAM = {
 				{	CLSID		= "{CFT_R_GBU_27_x_2}",
 					forbidden	= RCFT_general_restrictions
 				},
-				
+					--]]
 				{	CLSID		= GBU31A,
 					connector	= CFT_R5,
 					forbidden	= RCFT_general_restrictions
@@ -2006,11 +2007,11 @@ F15E_RAZBAM = {
 				},
 				{	CLSID		= "{CFT_R_GBU_38_x_3}",
 					forbidden	= RCFT_general_restrictions
-				},
+				},	
 				{	CLSID		= "{CFT_R_GBU_54_x_3}",
 					forbidden	= RCFT_general_restrictions
 				},
-				--]]
+				
 				
 				-- Practice
 				{	CLSID		= BDU50LD,	connector	= CFT_R5, forbidden	= RCFT_general_restrictions },
@@ -2199,8 +2200,9 @@ F15E_RAZBAM = {
 				{	CLSID = GBU31A, forbidden = Pylon14_MK80s_restrictions },
 				{	CLSID = GBU31B, forbidden = Pylon14_MK80s_restrictions },
 				{	CLSID = GBU038, forbidden = Pylon14_MK80s_restrictions },
-					--[[
+					
 				{	CLSID = GBU054, forbidden = Pylon14_MK80s_restrictions },
+				--[[
 				{	CLSID = AGM154A, Type = 1,	forbidden = Pylon14_general_restrictions },
 				
 				-- Missiles
