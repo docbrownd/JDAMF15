@@ -1995,7 +1995,7 @@ F15E_RAZBAM = {
 				},
 				{	CLSID		= "{CFT_R_GBU_27_x_2}",
 					forbidden	= RCFT_general_restrictions
-				},
+				},--]]
 				
 				{	CLSID		= GBU31A,
 					connector	= CFT_R5,
@@ -2016,7 +2016,7 @@ F15E_RAZBAM = {
 				{	CLSID		= "{CFT_R_GBU_54_x_3}",
 					forbidden	= RCFT_general_restrictions
 				},
-				--]]
+				
 				
 				-- Practice
 				{	CLSID		= BDU50LD,	connector	= CFT_R5, forbidden	= RCFT_general_restrictions },
