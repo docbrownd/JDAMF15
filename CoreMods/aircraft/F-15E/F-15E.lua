@@ -436,7 +436,7 @@ local CBU103	= "{CBU_103}"
 local CBU105	= "{CBU_105}"
 local GBU010	= "{51F9AAE5-964F-4D21-83FB-502E3BFE5F8A}"
 local GBU012	= "{DB769D48-67D7-42ED-A2BE-108D566C8B1E}"
-local GBU15B	= "{GBU_15_V_21B}"
+local GBU15B	= "{GBU_15_V_31B}"
 local GBU024	= "{34759BBC-AF1E-4AEE-A581-498FF7A6EBCE}"
 local GBU027	= "{EF0A9419-01D6-473B-99A3-BEBDB923B14D}"
 local GBU028	= "{F06B775B-FC70-44B5-8A9F-5B5E2EB839C7}"
@@ -1108,11 +1108,16 @@ F15E_RAZBAM = {
 		engine = 
 		{
 			Nmg		=	71.6,
+			Nominal_RPM		= 14000.0,
+			Nominal_Fan_RPM	= 10000.0,
+			Startup_Prework = 10.0,
+			Startup_Duration = 40.0,
+			Shutdown_Duration = 35.0,
 			MinRUD	=	0,
 			MaxRUD	=	1,
 			MaksRUD	=	0.965,
 			ForsRUD	=	1.000,
-			type	=	"TurboJet",
+			type	=	"TurboFan",
 			hMaxEng	=	19,
 			dcx_eng	=	0.0114,
 			cemax	=	1.24,
@@ -1515,15 +1520,14 @@ F15E_RAZBAM = {
 				{	CLSID = AGM130, Type = 1,
 					required = {{station = 8, loadout = {AXQ014}}},
 					forbidden = Pylon2_AGMs_restrictions
-				},--]]
-				
+				},
+				--]]
 				-- Smart Weapons
 				{	CLSID = GBU31A, forbidden = Pylon2_MK80s_restrictions },
 				{	CLSID = GBU31B, forbidden = Pylon2_MK80s_restrictions },
 				{	CLSID = GBU038, forbidden = Pylon2_MK80s_restrictions },
-			
 				{	CLSID = GBU054, forbidden = Pylon2_MK80s_restrictions },
-					--[[
+				--[[
 				{	CLSID = AGM154A, Type = 1, forbidden = Pylon2_general_restrictions },
 				{	CLSID = CBU103, forbidden = Pylon2_general_restrictions },
 				{	CLSID = CBU105, forbidden = Pylon2_general_restrictions },
@@ -1729,7 +1733,7 @@ F15E_RAZBAM = {
                 {	CLSID		= "{CFT_L_GBU_27_x_2}",
 					forbidden	= RLCFT_general_restrictions
 				},
-					--]]
+				--]]
 				{	CLSID = GBU31A,
 					connector	= CFT_L2,
 					forbidden	= LCFT_general_restrictions
@@ -1745,7 +1749,7 @@ F15E_RAZBAM = {
 				},
 				{	CLSID		= "{CFT_L_GBU_38_x_3}",
 					forbidden	= LCFT_general_restrictions
-				},	
+				},
 				{	CLSID		= "{CFT_L_GBU_54_x_3}",
 					forbidden	= LCFT_general_restrictions
 				},
@@ -1844,12 +1848,13 @@ F15E_RAZBAM = {
 						{station = 14, loadout = {GBU028}}
 					} 
 				},	
-					--]]
+				--]]
 				{ CLSID = GBU31A },
 				{ CLSID = GBU31B },
 				{ CLSID = GBU038 },
-					
-				{ CLSID = GBU054 },--[[
+				{ CLSID = GBU054 },
+
+				--[[
 				{ CLSID = AGM154A },
 				--]]
 				
@@ -1991,7 +1996,7 @@ F15E_RAZBAM = {
 				{	CLSID		= "{CFT_R_GBU_27_x_2}",
 					forbidden	= RCFT_general_restrictions
 				},
-					--]]
+				
 				{	CLSID		= GBU31A,
 					connector	= CFT_R5,
 					forbidden	= RCFT_general_restrictions
@@ -2007,11 +2012,11 @@ F15E_RAZBAM = {
 				},
 				{	CLSID		= "{CFT_R_GBU_38_x_3}",
 					forbidden	= RCFT_general_restrictions
-				},	
+				},
 				{	CLSID		= "{CFT_R_GBU_54_x_3}",
 					forbidden	= RCFT_general_restrictions
 				},
-				
+				--]]
 				
 				-- Practice
 				{	CLSID		= BDU50LD,	connector	= CFT_R5, forbidden	= RCFT_general_restrictions },
@@ -2200,7 +2205,6 @@ F15E_RAZBAM = {
 				{	CLSID = GBU31A, forbidden = Pylon14_MK80s_restrictions },
 				{	CLSID = GBU31B, forbidden = Pylon14_MK80s_restrictions },
 				{	CLSID = GBU038, forbidden = Pylon14_MK80s_restrictions },
-					
 				{	CLSID = GBU054, forbidden = Pylon14_MK80s_restrictions },
 				--[[
 				{	CLSID = AGM154A, Type = 1,	forbidden = Pylon14_general_restrictions },
